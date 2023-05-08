@@ -1,0 +1,244 @@
+@import './assets/styles/variables';
+@import './assets/styles/classes';
+@import './assets/styles/media-queries';
+@import './assets/styles/reset';
+@import './assets/styles/utils';
+@import './assets/styles/base';
+@import './assets/styles/progress';
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid:
+    'aside header' auto
+    'aside body' 1fr
+    'footer footer' auto /
+    350px auto;
+  // HEADER PART
+  @include xs {
+    grid:
+      'header' auto
+      'aside' auto
+      'body' auto
+      'footer' auto /
+      1fr;
+  }
+  header {
+    grid-area: header;
+    background: linear-gradient(
+      130deg,
+      var(--primary) 45%,
+      var(--secondary) 75%,
+      white
+    );
+    color: white;
+    padding: 6rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    h1 {
+      font-size: 6rem;
+      letter-spacing: 2rem;
+    }
+    @include xs {
+      h1 {
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+  // ASIDE PART
+  aside {
+    grid-area: aside;
+    border-right: 1px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        border-radius: 50%;
+        width: 75%;
+        margin: 2rem;
+      }
+      p {
+        font-size: 2.9rem;
+        font-weight: 700;
+        text-decoration: underline;
+        letter-spacing: 0.3rem;
+      }
+    }
+    .information {
+      margin: 2rem;
+      margin-top: 4rem;
+      h2 {
+        font-size: 2.5rem;
+      }
+      ul {
+        margin: 2rem;
+        li {
+          h4 {
+            margin: 1.2rem 0;
+          }
+          p {
+            margin: 0 1.2rem;
+          }
+        }
+      }
+    }
+    .skills {
+      margin: 2rem;
+      h2 {
+        font-size: 2.5rem;
+      }
+      ul {
+        margin: 2rem;
+        li {
+          padding: 1.5rem 0;
+          h4 {
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+          }
+          .jauge {
+            width: 100%;
+            height: 5px;
+            background: var(--jauge);
+          }
+        }
+      }
+    }
+    .hobbies {
+      margin: 2rem;
+      h2 {
+        font-size: 2.5rem;
+      }
+      ul {
+        margin: 2rem;
+        li {
+          padding: 1rem 0;
+        }
+      }
+    }
+    @include xs {
+      border-bottom: 1px solid black;
+      border-right: 0;
+      width: 100%;
+
+      .title {
+        img {
+          width: 90%;
+        }
+        p {
+          font-size: 8rem;
+        }
+      }
+      .information {
+        width: auto;
+        h2 {
+          margin-top: 2rem;
+          margin-left: 2rem;
+          font-size: 6rem;
+        }
+        ul {
+          li {
+            h4 {
+              font-size: 4rem;
+            }
+            p {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+      .skills {
+        width: auto;
+        h2 {
+          margin-top: 2rem;
+          margin-left: 2rem;
+          font-size: 6rem;
+        }
+        ul {
+          li {
+            h4 {
+              font-size: 4rem;
+            }
+            padding: 1rem;
+          }
+        }
+      }
+      .hobbies {
+        width: auto;
+        h2 {
+          margin-top: 2rem;
+          margin-left: 2rem;
+          font-size: 6rem;
+        }
+        ul {
+          li {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+  // MAIN PART
+  main {
+    grid-area: body;
+    padding: 2rem 2rem;
+    .project {
+      padding: 0.5rem 2rem;
+      .project-elem {
+        border-left: 1px solid #444;
+        margin-bottom: 3rem;
+        padding: 1rem 1.5rem;
+        h4 {
+          font-weight: 550;
+        }
+      }
+    }
+    @include xs {
+      margin-top: 2rem;
+      h2 {
+        font-size: 8rem;
+      }
+      .project {
+        .project-elem {
+          margin-top: 5rem;
+          h3 {
+            font-size: 5rem;
+          }
+          h4 {
+            font-size: 4rem;
+          }
+          p {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+  // FOOTER PART
+  footer {
+    grid-area: footer;
+    background: #333;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      min-width: 600px;
+      justify-content: space-between;
+      li {
+        margin: 2rem 0;
+        a {
+          color: white;
+        }
+      }
+    }
+    @include xs {
+      font-size: 3rem;
+    }
+  }
+}
