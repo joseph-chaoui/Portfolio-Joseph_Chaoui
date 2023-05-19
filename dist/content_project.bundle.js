@@ -65,6 +65,10 @@ var myProject = [{
   nom: 'TODO LIST',
   language: 'HTML CSS JS',
   description: "J'ai r\xE9aliser une page simple qui permet de creer des taches, les modifier ou les\n                  supprimer (todo list). Cela m'a permis de commencer a me familiaris\xE9 avec le js,"
+}, {
+  nom: 'Snake Js',
+  language: 'HTML CSS JS',
+  description: "J'ai r\xE9aliser le jeu snake, le but du jeu est de controler un serpend qui doit manger\n                  une pomme et a chaque fois qu'il grandi la pomme se d\xE9place et ainsi de suite, la condition\n                  de d\xE9faite est quand on d\xE9passe des bordures ou qu'on se mange soit m\xEAme"
 }];
 /******/ })()
 ;
