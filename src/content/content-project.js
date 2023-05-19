@@ -40,4 +40,11 @@ export const myProject = [
     description: `J'ai réaliser une page simple qui permet de creer des taches, les modifier ou les
                   supprimer (todo list). Cela m'a permis de commencer a me familiarisé avec le js,`,
   },
+  {
+    nom: 'Snake Js',
+    language: 'HTML CSS JS',
+    description: `J'ai réaliser le jeu snake, le but du jeu est de controler un serpend qui doit manger
+                  une pomme et a chaque fois qu'il grandi la pomme se déplace et ainsi de suite, la condition
+                  de défaite est quand on dépasse des bordures ou qu'on se mange soit même`,
+  },
 ];
